@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md bg-dark border-bottom border-body sticky-top " data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"
+      ><i class="fa-solid fa-place-of-worship"></i
+    ></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Introduce Something New&nbsp;|</a>
+<% if(typeof curruser === 'undefined' || !curruser){%>
+        <a class="nav-link"  href="/signup"><b>Sign up&nbsp;&nbsp;</b>|</a>
+        <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } %> <% if(curruser){%>
+        <a class="nav-link" href="/logout" >Logout</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
+
